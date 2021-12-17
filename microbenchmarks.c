@@ -28,12 +28,83 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <stdint.h>
 #include <flexos/microbenchmarks/isolated.h>
 
 /*
  * make sure function does not get inlined
  */
-__attribute__ ((noinline)) void flexos_microbenchmarks_empty_fcall(void) {
-    /* keep the call from being optimized away */
+__attribute__ ((noinline)) void flexos_microbenchmarks_fcall_0(void) {
     asm volatile ("");
+}
+
+__attribute__ ((noinline)) uint64_t flexos_microbenchmarks_fcall_0r(void) {
+    asm volatile ("");
+    return 42;
+}
+
+__attribute__ ((noinline)) void flexos_microbenchmarks_fcall_1(
+    uint64_t arg1) {
+    asm volatile ("");
+}
+
+__attribute__ ((noinline)) uint64_t flexos_microbenchmarks_fcall_1r(
+    uint64_t arg1) {
+    asm volatile ("");
+    return arg1;
+}
+
+__attribute__ ((noinline)) void flexos_microbenchmarks_fcall_2(
+    uint64_t arg1, uint64_t arg2) {
+    asm volatile ("");
+}
+
+__attribute__ ((noinline)) uint64_t flexos_microbenchmarks_fcall_2r(
+    uint64_t arg1, uint64_t arg2) {
+    asm volatile ("");
+    return arg2;
+}
+
+__attribute__ ((noinline)) void flexos_microbenchmarks_fcall_3(
+    uint64_t arg1, uint64_t arg2, uint64_t arg3) {
+    asm volatile ("");
+}
+
+__attribute__ ((noinline)) uint64_t flexos_microbenchmarks_fcall_3r(
+    uint64_t arg1, uint64_t arg2, uint64_t arg3) {
+    asm volatile ("");
+    return arg3;
+}
+
+__attribute__ ((noinline)) void flexos_microbenchmarks_fcall_4(
+    uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4) {
+    asm volatile ("");
+}
+
+__attribute__ ((noinline)) uint64_t flexos_microbenchmarks_fcall_4r(
+    uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4) {
+    asm volatile ("");
+    return arg4;
+}
+
+__attribute__ ((noinline)) void flexos_microbenchmarks_fcall_5(
+    uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4, uint64_t arg5) {
+    asm volatile ("");
+}
+
+__attribute__ ((noinline)) uint64_t flexos_microbenchmarks_fcall_5r(
+    uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4, uint64_t arg5) {
+    asm volatile ("");
+    return arg5;
+}
+
+__attribute__ ((noinline)) void flexos_microbenchmarks_fcall_6(
+    uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4, uint64_t arg5, uint64_t arg6) {
+    asm volatile ("");
+}
+
+__attribute__ ((noinline)) uint64_t flexos_microbenchmarks_fcall_6r(
+    uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4, uint64_t arg5, uint64_t arg6) {
+    asm volatile ("");
+    return arg6;
 }

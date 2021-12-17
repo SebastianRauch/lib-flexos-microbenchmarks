@@ -31,6 +31,24 @@
 #ifndef LIBFLEXOSMICROBENCHMARKS_H
 #define LIBFLEXOSMICROBENCHMARKS_H
 
-void flexos_microbenchmarks_empty_fcall(void);
+void flexos_microbenchmarks_fcall_0(void);
+uint64_t flexos_microbenchmarks_fcall_0r(void);
 
+void flexos_microbenchmarks_fcall_1(uint64_t arg1);
+uint64_t flexos_microbenchmarks_fcall_1r(uint64_t arg1);
+
+void flexos_microbenchmarks_fcall_2(uint64_t arg1, uint64_t arg2);
+uint64_t flexos_microbenchmarks_fcall_2r(uint64_t arg1, uint64_t arg2);
+
+void flexos_microbenchmarks_fcall_3(uint64_t arg1, uint64_t arg2, uint64_t arg3);
+uint64_t flexos_microbenchmarks_fcall_3r(uint64_t arg1, uint64_t arg2, uint64_t arg3);
+
+void flexos_microbenchmarks_fcall_4(uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4);
+uint64_t flexos_microbenchmarks_fcall_4r(uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4);
+
+void flexos_microbenchmarks_fcall_5(uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4, uint64_t arg5);
+uint64_t flexos_microbenchmarks_fcall_5r(uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4, uint64_t arg5);
+
+void flexos_microbenchmarks_fcall_6(uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4, uint64_t arg5, uint64_t arg6);
+uint64_t flexos_microbenchmarks_fcall_6r(uint64_t arg1, uint64_t arg2, uint64_t arg3, uint64_t arg4, uint64_t arg5, uint64_t arg6);
 #endif /* LIBFLEXOSMICROBENCHMARKS_H */
