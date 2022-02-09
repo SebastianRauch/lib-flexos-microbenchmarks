@@ -31,6 +31,14 @@
 #ifndef LIBFLEXOSMICROBENCHMARKS_H
 #define LIBFLEXOSMICROBENCHMARKS_H
 
+#define STATE_IDLE 0
+#define STATE_SENT 1
+#define STATE_RET 2
+
+extern int comm;
+
+void start_comm_test(void *arg);
+
 void flexos_microbenchmarks_fcall_0(void);
 uint64_t flexos_microbenchmarks_fcall_0r(void);
 

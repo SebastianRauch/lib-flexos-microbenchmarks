@@ -29,7 +29,33 @@
  */
 
 #include <stdint.h>
+#include <stddef.h>
+#include <flexos/isolation.h>
 #include <flexos/microbenchmarks/isolated.h>
+
+
+/* shared for communication test */
+int __attribute__((section(".data_shared"))) comm;
+
+void *comm_test_func(void *arg) {
+	volatile int *stop = (volatile int *) arg;
+	volatile int *state = (volatile int *) (&comm);
+	while (*stop == 0) {
+		if (*state = STATE_SENT) {
+			*state = STATE_RET;
+		}
+	}
+	uk_pr_info("comm thread exiting\n");
+	return NULL;
+}
+
+__attribute__ ((noinline)) void start_comm_test(void *arg) {
+	struct uk_thread *thread = uk_thread_current();
+    uk_sched_thread_create(thread->sched, NULL, NULL, (void*) &comm_test_func, arg);
+	uk_pr_info("created communication thread\n");
+	return;
+}
+
 
 /*
  * make sure function does not get inlined
