@@ -32,7 +32,7 @@
 #include <stddef.h>
 #include <flexos/isolation.h>
 #include <flexos/microbenchmarks/isolated.h>
-
+#include <uk/thread.h>
 
 /* shared for communication test */
 int __attribute__((section(".data_shared"))) comm;
