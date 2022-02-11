@@ -38,14 +38,12 @@
 int __attribute__((section(".data_shared"))) comm;
 
 void *comm_test_func(void *arg) {
-	volatile int *stop = (volatile int *) arg;
 	volatile int *state = (volatile int *) (&comm);
-	while (*stop == 0) {
+	while (1) {
 		if (*state = STATE_SENT) {
 			*state = STATE_RET;
 		}
 	}
-	uk_pr_info("comm thread exiting\n");
 	return NULL;
 }
 
