@@ -40,9 +40,10 @@ int __attribute__((section(".data_shared"))) comm;
 void *comm_test_func(void *arg) {
 	volatile int *state = (volatile int *) (&comm);
 	while (1) {
-		if (*state = STATE_SENT) {
-			*state = STATE_RET;
+		while (*state != STATE_SENT) {
+			asm volatile("pause" ::: "memory");
 		}
+		*state = STATE_RET;
 	}
 	return NULL;
 }
